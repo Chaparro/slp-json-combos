@@ -36,16 +36,20 @@ While it's playing in Dolphin, you can capture the footage with **OBS** or any o
 
 # Extras: black frame remover
 
-After playing and recording, you might notice there's a lot of black screen time in between replays, and it's all in the recording. It's a pain to edit this out manually if there's a lot of footage. One kind soul on the Project Slippi Discord provided a **Python** script to go through the video file and automatically remove those pesky black screens:
+After playing and recording, you might notice there's a lot of black screen time in between replays, and it's all in the recording, of course it's a pain to edit this out manually if there's a lot of footage. 
+
+One kind soul on the Project Slippi Discord provided a **Python** script to go through the video file and automatically remove those pesky black screens:
 
 **Requirements**
 Install Python 3.x: https://www.python.org/
+
 ffmpeg for Windows: https://ffmpeg.zeranoe.com/builds/
 
 blackFrameRemover.py:
 https://gist.github.com/Chaparro/7f8b0b9bfaf38dae469e635f51a69a9e
+(I've modified this to use **mp4** source)
 
-Get this script to where your video files are, edit the input and output names to your liking, then run **Python blackFrameRemover**
+Get this script to where your video files are, edit the input and output names to your liking, then run **Python blackFrameRemover** and wait for it to process the entire video. 
 
 
 
