@@ -1,0 +1,15 @@
+{
+  "name": "slp-json-combos",
+  "description": "Use slp-parser-js to generate JSONs needed to feed combo data to Dolphin",
+  "version": "0.0.1",
+  "maintainers": [
+    {
+      "name": "Chaparro",
+      "email": "ricardoxac@gmail.com",
+      "web": ""
+    }
+  ],
+  "dependencies": {
+    "slp-parser-js": "2.4.0"
+  }
+}
