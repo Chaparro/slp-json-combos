@@ -1,5 +1,5 @@
 # slp-json-combos
-Uses slp-parser-js to generate JSONs needed to feed combo data to Dolphin
+Uses slp-parser-js [https://github.com/project-slippi/slp-parser-js] to generate JSONs needed to feed replay combo data to Dolphin
 
 
 # Requirements, installation and usage
