@@ -54,5 +54,5 @@ Get this script to where your video files are, edit the input and output names t
 
 
 
-# And there you have it, you should have a raw video file of all the combo footage with almost no interruptions. 
+# And there you go, you should have a raw video file of all the combo footage with almost no interruptions. 
 Any other edit you want is on you, get comboing! 
