@@ -41,6 +41,7 @@ After playing and recording, you might notice there's a lot of black screen time
 One kind soul on the Project Slippi Discord provided a **Python** script to go through the video file and automatically remove those pesky black screens:
 
 **Requirements**
+
 Install Python 3.x: https://www.python.org/
 
 ffmpeg for Windows: https://ffmpeg.zeranoe.com/builds/
