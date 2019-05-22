@@ -16,12 +16,13 @@ jsonCombo = {
 jsonString = '';
 
 fs.readdir(testFolder, function(err, items) {
+    console.log("Reading " + items.length + " .slp files from directory\n");
     for (var i=0; i<items.length; i++) {
     	var t_path = path.resolve() + '/files/' + items[i];
     	var absolutePath = t_path.replace(/\\/g,"/");
 
     	const game = new SlippiGame(testFolder + items[i]);
-    	console.log(i + ' ' + items[i]);
+    	console.log(i + ' - ' + items[i]);
  	
 		const settings = game.getSettings();
 
@@ -41,7 +42,7 @@ fs.readdir(testFolder, function(err, items) {
     }
     fs.writeFile('./comboData.json', JSON.stringify(jsonCombo), (err) => {
     	if (!err) {
-        	console.log('done comboing!');
+        	console.log('Done comboing! \nGenerated comboData.json');
     	}
 	});
 
