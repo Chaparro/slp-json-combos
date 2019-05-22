@@ -4,16 +4,13 @@ const path = require('path');
 const testFolder = './files/';
 const fs = require('fs');
 
-combos = {};
-
-jsonCombo = {
+var jsonCombo = {
     "mode": "queue",
     "replay": "",
     "isRealTimeMode": false,
     "queue": [] 
 };
 
-jsonString = '';
 
 function banWobbling(movesArray) { // checks if there are more than 8 grab pummels in combo
   var pummel = 0;
@@ -27,7 +24,9 @@ function banWobbling(movesArray) { // checks if there are more than 8 grab pumme
   return banned;
 }
 
-//console.log(process.argv[2]);
+
+var object = process.argv[2] == '-c' ? 'conversions' : 'combos';
+console.log('\nProcessing: ' + object);
 
 fs.readdir(testFolder, function(err, items) {
     console.log("Reading " + items.length + " .slp files from directory\n");
@@ -38,23 +37,25 @@ fs.readdir(testFolder, function(err, items) {
     	const game = new SlippiGame(testFolder + items[i]);
     	console.log(i + ' - ' + items[i]);
  	
-		  const settings = game.getSettings();
+		  //const settings = game.getSettings();
 
 		  const stats = game.getStats();
-  		for (var j=0; j<stats.combos.length; j++) {
-  			if (stats.combos[j].endPercent - stats.combos[j].startPercent >= 60 
-          && stats.combos[j].didKill
-          && banWobbling(stats.combos[j].moves)) {
+  		for (var j=0; j<stats[object].length; j++) {
 
-  				console.log(stats.combos[j]);
+  			if (stats[object][j].endPercent - stats[object][j].startPercent >= 60 
+          && stats[object][j].didKill
+          && banWobbling(stats[object][j].moves)) {
+
+  				console.log(stats[object][j]);
+
   				comboData = {
-  					startFrame : stats.combos[j].startFrame,
-  					endFrame : stats.combos[j].endFrame,
+  					startFrame : stats[object][j].startFrame,
+  					endFrame : stats[object][j].endFrame,
   					path : absolutePath
   				};
   				jsonCombo.queue.push(comboData);
   			} 
-  		};
+  		}
 
     }
     fs.writeFile('./comboData.json', JSON.stringify(jsonCombo), (err) => {
