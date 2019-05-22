@@ -61,10 +61,10 @@ Any other edit you want is on you, get comboing!
 
 ## Free DLC
 
-~~ Ignore Wobbling ~~ 
+~~Ignore Wobbling ~~ 
 
 Added a validation that looks for 8 or more grab pummels, these combos will be ignored.
 
-~~ Toggle between combo highlights and conversion highlights ~~
+~~Toggle between combo highlights and conversion highlights ~~
 
 Running *node app.js -c* will get data from the conversion objects instead of combo objects, Slippi's conversions are more lenient than slippi's combos and thus can be used to create highlights when there aren't many true combos in the replay files.
