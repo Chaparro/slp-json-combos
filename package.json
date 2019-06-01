@@ -10,6 +10,6 @@
     }
   ],
   "dependencies": {
-    "slp-parser-js": "2.4.0"
+    "slp-parser-js": "^2.5.0"
   }
 }
