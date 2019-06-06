@@ -11,9 +11,9 @@ Install node – https://nodejs.org/en/download/
 
 - Then, create a subfolder called **"files"** and place inside all the .slp files you want to work with.
 
-- Once you have done all that, command line run **node app.js** on the directory to execute the script, wait for it to finish and it will output a **comboData.json** file.
+- Once you have done all that, command line run **node app.js** on the directory to execute the script, wait for it to finish and it will output a **comboData.json** file in a auto-generated **generatedJSONs** folder.
 
-_Note: It is configured to get only combos that inflict +60% and end the stock_
+_Note: It is configured to only get combos that inflict +60%, end the stock, and is not a wobble_
 
 
 # Replaying all combo sections on Dolphin
@@ -24,7 +24,7 @@ https://slippi.gg/
 - Go to the dolphin-slippi directory used for replays, typically at **C:\Users\[User]\AppData\Roaming\Slippi Desktop App\dolphin**
 - [Optional] configure the Graphic settings/Gecko codes in this Dolphin instance to what you prefer. Personally i turn **Game Music OFF** since it doesn't go well with the nature of this recording effort. 
 
-- Copy the generated **comboData.json** to this directory
+- Copy the generated **comboData.json** from **generatedJSONs** folder to this directory
 - Then, command line run:
 
 - _Dolphin.exe -i comboData.json -e "[full path to melee Vanilla ISO]"_
@@ -68,3 +68,11 @@ Added a validation that looks for 8 or more grab pummels, these combos will be i
 __Toggle between combo highlights and conversion highlights__
 
 Running __*node app.js -c*__ will get data from the conversion objects instead of combo objects, Slippi's conversions are more lenient than slippi's combos and thus can be used to create highlights when there aren't many true combos in the replay files.
+
+__Parameter configuration__
+
+You can configure some parameters, in this case, you can configure the following:
+- shouldKill = **true** / **false**;
+- wobblingBanned = **true** / **false**;
+- comboPercentaje = **60** / **any number**;
+
