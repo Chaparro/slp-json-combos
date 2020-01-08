@@ -4,6 +4,7 @@ const path = require('path');
 const testFolder = './files/';
 const renamedFolder = './renamedFiles/';
 const fs = require('fs');
+const _ = require('lodash')
 
 var jsonCombo = {
     "mode": "queue",
@@ -54,7 +55,9 @@ fs.readdir(testFolder, function(err, items) {
     const settings = game.getSettings();
     const players = settings.players;
 
-    const gameName = (players[0].nametag?players[0].nametag:"#")+"("+getChar(players[0].characterId)+"-"+players[0].characterColor+")_vs_"+(players[1].nametag?players[1].nametag:"#")+"("+getChar(players[1].characterId)+"-"+players[1].characterColor+")_("+getStage(settings.stageId)+")";
+    const playerOneGameName = _.get(players, '[0].nametag');
+    const playerTwoGameName = _.get(players, '[1].nametag');
+    const gameName = `${playerOneGameName}(${getChar(players[0].characterId)}-${players[0].characterColor})_vs_${playerTwoGameName}(${getChar(players[1].characterId)}-${players[1].characterColor})_(${getStage(settings.stageId)})`;
 
     var x = createdDate(testFolder+items[i]);
     var fileName = 'renamedFiles/'+x+"_"+gameName+".slp";
