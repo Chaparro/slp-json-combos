@@ -25,7 +25,7 @@ jsonAllMatches = {
 /* Configurable parameters */
 shouldKill = true;
 wobblingBanned = true;
-comboPercentage = 60;
+comboPercentage = 55;
 
 /* Non configurable parameters (DO NOT MOVE) */
 jsonString = '';
@@ -210,7 +210,7 @@ function getChar(x) {
       return "Roy";
     case 24:
       return "Pichu";
-    case 24:
+    case 25:
       return "Ganondorf";
     default:
       return x;
