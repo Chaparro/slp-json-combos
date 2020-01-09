@@ -25,7 +25,7 @@ jsonAllMatches = {
 /* Configurable parameters */
 shouldKill = true;
 wobblingBanned = true;
-comboPercentaje = 60;
+comboPercentage = 60;
 
 /* Non configurable parameters (DO NOT MOVE) */
 jsonString = '';
@@ -71,7 +71,7 @@ fs.readdir(testFolder, function(err, items) {
     console.log('Looking for combos with this parameters:');
     console.log('\t - Should kill:' + shouldKill);
     console.log('\t - Wobbling banned:' + wobblingBanned);
-    console.log('\t - Combo of ' + comboPercentaje+'% or more');
+    console.log('\t - Combo of ' + comboPercentage+'% or more');
     console.log('Looking in '+items.length+' clips... \n');
 
     for (var i=0; i<items.length; i++) {
@@ -82,7 +82,7 @@ fs.readdir(testFolder, function(err, items) {
       const stats = game.getStats();
 
       for (var j=0; j<stats[object].length; j++) {
-        if (stats[object][j].endPercent - stats[object][j].startPercent >= comboPercentaje && (shouldKill?stats[object][j].didKill:true) && (wobblingBanned?isNotAWobble(stats[object][j].moves):true)){
+        if (stats[object][j].endPercent - stats[object][j].startPercent >= comboPercentage && (shouldKill?stats[object][j].didKill:true) && (wobblingBanned?isNotAWobble(stats[object][j].moves):true)){
           comboCounter++;
           comboData = {
             startFrame : stats[object][j].startFrame - frameOffset1,

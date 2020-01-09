@@ -8,6 +8,8 @@ yarn-error.log*
 #data
 files
 comboData.json
+generatedJSONs
+renamedFiles
 
 # Runtime data
 pids
