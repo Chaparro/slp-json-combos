@@ -10,7 +10,7 @@
     }
   ],
   "dependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "slp-parser-js": "^2.5.0"
   }
 }
