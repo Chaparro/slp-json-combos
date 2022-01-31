@@ -1,3 +1,8 @@
+# DISCLAIMER
+This was a tool used personally by me and some TOs when Slippi just came out, it was a quick and dirty prototype to get quick highlights. 
+Nowadays, project clippi is the most comprehensive and complete tool for this, so check them out: https://github.com/vinceau/project-clippi
+
+
 # slp-json-combos
 Uses slp-parser-js [https://github.com/project-slippi/slp-parser-js] to generate JSONs needed to feed replay combo data to Dolphin
 
